@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ID:6706021610175 name:danunai last:phupradis SEC:A</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --navy: #101b2d;
+      --blue: #1769aa;
+      --blue-dark: #105486;
+      --ink: #202b38;
+      --muted: #6b7785;
+      --surface: #ffffff;
+      --page: #f4f7fb;
+    }
+
+    body {
+      padding-top: 76px;
+      background: var(--page);
+      color: var(--ink);
+      font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif;
+      line-height: 1.7;
+    }
+
+    .navbar {
+      min-height: 66px;
+      background: rgba(16, 27, 45, .97) !important;
+      box-shadow: 0 5px 22px rgba(12, 25, 43, .16);
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.18rem;
+      letter-spacing: .02em;
+    }
+
+    .navbar-nav {
+      gap: 5px;
+    }
+
+    .navbar .nav-link {
+      color: rgba(255, 255, 255, .76) !important;
+      font-size: .94rem;
+      font-weight: 600;
+      padding: .55rem .9rem !important;
+      border-radius: 999px;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: #fff !important;
+      background: rgba(255, 255, 255, .13);
+    }
+
+    .album {
+      background: transparent !important;
+      padding-top: 2.4rem !important;
+    }
+
+    .page-heading {
+      margin: 0 0 1.5rem;
+      text-align: center;
+    }
+
+    .page-heading .eyebrow {
+      display: inline-block;
+      margin-bottom: .35rem;
+      color: var(--blue);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .page-heading h1 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(1.65rem, 3vw, 2.35rem);
+      font-weight: 800;
+    }
+
+    .page-heading p {
+      margin: .45rem 0 0;
+      color: var(--muted);
+      font-size: .96rem;
+    }
+
+    .card {
+      height: 100%;
+      overflow: hidden;
+      border: 1px solid rgba(28, 48, 75, .07);
+      border-radius: 18px;
+      background: var(--surface);
+      box-shadow: 0 8px 25px rgba(23, 42, 69, .07) !important;
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 34px rgba(23, 42, 69, .13) !important;
+    }
+
+    .card-img-top {
+      height: 235px;
+      padding: 12px;
+      object-fit: contain !important;
+      background: #fff;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      padding: 1.15rem;
+    }
+
+    .card-text {
+      min-height: 3.4rem;
+      margin-bottom: 1rem;
+      color: var(--ink);
+      font-size: .98rem;
+      font-weight: 700;
+      line-height: 1.55;
+    }
+
+    .card-body .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+    }
+
+    .card-body .btn {
+      border-radius: 999px !important;
+      padding: .42rem .8rem;
+      font-size: .82rem;
+      font-weight: 600;
+    }
+
+    .card-body .btn:first-child {
+      color: #fff;
+      border-color: var(--blue);
+      background: var(--blue);
+    }
+
+    .card-body .btn:first-child:hover {
+      border-color: var(--blue-dark);
+      background: var(--blue-dark);
+    }
+
+    .card-body .btn:last-child {
+      color: var(--blue);
+      border-color: rgba(23, 105, 170, .35);
+    }
+
+    .card-body .btn:last-child:hover {
+      color: #fff;
+      border-color: var(--blue);
+      background: var(--blue);
+    }
+
+    .card-body small {
+      align-self: center;
+      white-space: nowrap;
+      color: var(--muted) !important;
+    }
+
+    .page-navigation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .55rem;
+      padding: 1.2rem 0 2.8rem;
+    }
+
+    .page-navigation a {
+      display: inline-flex;
+      min-width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 .95rem;
+      border: 1px solid #dbe3ed;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--ink);
+      font-size: .9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all .2s ease;
+    }
+
+    .page-navigation a:hover,
+    .page-navigation a.active {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 5px 14px rgba(23, 105, 170, .2);
+    }
+
+    @media (max-width: 767.98px) {
+      body {
+        padding-top: 68px;
+      }
+
+      .album {
+        padding-top: 1.5rem !important;
+      }
+
+      .card-img-top {
+        height: 210px;
+      }
+
+      .card-body .d-flex {
+        align-items: flex-start !important;
+        gap: .65rem;
+      }
+    }
+
+    .page-navigation a.active {
+      background: #1769aa;
+      color: #ffffff;
+      border-color: #1769aa;
+      box-shadow: 0 5px 14px rgba(23, 105, 170, 0.25);
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">JengPaiDeershop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="singup.html">Signup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="loging.html">Loging</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user.html">ผู้จัดทำ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ประวัติ.html">ประวัติ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="วิธีการเล่น.html">วิธีการเล่น</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm mt-3">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="img/1-1.png"
+              alt="คำอธิบายรูปภาพ" style="object-fit: cover;">
+
+            <div class="card-body">
+              <p class="card-text" _msttexthash="388286366" _msthash="21" style="direction: ltr; text-align: left;">
+                Astrox88-D Play</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="4656197" _msthash="22"
+                    style="direction: ltr;">ซื้อตอนนี้</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="5414175" _msthash="23"
+                    style="direction: ltr;">ใส่ตะกร้า</button>
+                </div>
+                <small class="text-body-secondary" _msttexthash="1794702" _msthash="24"
+                  style="direction: ltr; text-align: left;">9 นาที</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm mt-3">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="img/1-1.png" alt="Astrox88-D"
+              style="object-fit: cover;">
+            <div class="card-body">
+              <p class="card-text" _msttexthash="388286366" _msthash="28" style="direction: ltr; text-align: left;">
+                Astrox88-D GAME</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="4656197" _msthash="22"
+                    style="direction: ltr;">ซื้อตอนนี้</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="5414175" _msthash="23"
+                    style="direction: ltr;">ใส่ตะกร้า</button>
+                </div>
+                <small class="text-body-secondary" _msttexthash="1794702" _msthash="31"
+                  style="direction: ltr; text-align: left;">9 นาที</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm mt-3">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="img/1-1.png" alt="Astrox88-D"
+              style="object-fit: cover;">
+            <div class="card-body">
+              <p class="card-text" _msttexthash="388286366" _msthash="35" style="direction: ltr; text-align: left;">
+                Astrox88-D Tour</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="4656197" _msthash="22"
+                    style="direction: ltr;">ซื้อตอนนี้</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="5414175" _msthash="23"
+                    style="direction: ltr;">ใส่ตะกร้า</button>
+                </div>
+                <small class="text-body-secondary" _msttexthash="1794702" _msthash="38"
+                  style="direction: ltr; text-align: left;">9 นาที</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm mt-3">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="img/1-1.png" alt="Astrox88-D"
+              style="object-fit: cover;">
+            <div class="card-body">
+              <p class="card-text" _msttexthash="388286366" _msthash="42" style="direction: ltr; text-align: left;">
+                Astrox88-D Pro</Prog>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="4656197" _msthash="22"
+                    style="direction: ltr;">ซื้อตอนนี้</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="5414175" _msthash="23"
+                    style="direction: ltr;">ใส่ตะกร้า</button>
+                </div>
+                <small class="text-body-secondary" _msttexthash="1794702" _msthash="45"
+                  style="direction: ltr; text-align: left;">9 นาที</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm mt-3">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="img/2-1.png" alt="Astrox88-D"
+              style="object-fit: cover;">
+            <div class="card-body">
+              <p class="card-text" _msttexthash="388286366" _msthash="49" style="direction: ltr; text-align: left;">
+                arcsaber 11 Pro</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="4656197" _msthash="22"
+                    style="direction: ltr;">ซื้อตอนนี้</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="5414175" _msthash="23"
+                    style="direction: ltr;">ใส่ตะกร้า</button>
+                </div>
+                <small class="text-body-secondary" _msttexthash="1794702" _msthash="52"
+                  style="direction: ltr; text-align: left;">9 นาที</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm mt-3">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="img/2-2.jpg" alt="Astrox88-D"
+              style="object-fit: cover;">
+            <div class="card-body">
+              <p class="card-text" _msttexthash="388286366" _msthash="56" style="direction: ltr; text-align: left;">
+                arcsaber 11 TOUR</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="4656197" _msthash="22"
+                    style="direction: ltr;">ซื้อตอนนี้</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="5414175" _msthash="23"
+                    style="direction: ltr;">ใส่ตะกร้า</button>
+                </div>
+                <small class="text-body-secondary" _msttexthash="1794702" _msthash="59"
+                  style="direction: ltr; text-align: left;">9 นาที</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm mt-3">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="img/2-2.jpg" alt="Astrox88-D"
+              style="object-fit: cover;">
+            <div class="card-body">
+              <p class="card-text" _msttexthash="388286366" _msthash="63" style="direction: ltr; text-align: left;">
+                arcsaber 11 PLAY</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="4656197" _msthash="22"
+                    style="direction: ltr;">ซื้อตอนนี้</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="5414175" _msthash="23"
+                    style="direction: ltr;">ใส่ตะกร้า</button>
+                </div>
+                <small class="text-body-secondary" _msttexthash="1794702" _msthash="66"
+                  style="direction: ltr; text-align: left;">9 นาที</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm mt-3">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="img/5.jpg" alt="Astrox88-D"
+              style="object-fit: cover;">
+            <div class="card-body">
+              <p class="card-text" _msttexthash="388286366" _msthash="70" style="direction: ltr; text-align: left;">
+                arcsaber 7 Play</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="4656197" _msthash="22"
+                    style="direction: ltr;">ซื้อตอนนี้</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="5414175" _msthash="23"
+                    style="direction: ltr;">ใส่ตะกร้า</button>
+                </div>
+                <small class="text-body-secondary" _msttexthash="1794702" _msthash="73"
+                  style="direction: ltr; text-align: left;">9 นาที</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm mt-3">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="img/5.jpg" alt="Astrox88-D"
+              style="object-fit: cover;">
+            <div class="card-body">
+              <p class="card-text" _msttexthash="388286366" _msthash="77" style="direction: ltr; text-align: left;">
+                arcsaber 7 TOUR</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="4656197" _msthash="22"
+                    style="direction: ltr;">ซื้อตอนนี้</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="5414175" _msthash="23"
+                    style="direction: ltr;">ใส่ตะกร้า</button>
+                </div>
+                <small class="text-body-secondary" _msttexthash="1794702" _msthash="80"
+                  style="direction: ltr; text-align: left;">9 นาที</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="page-navigation" aria-label="เลือกหน้าสินค้า">
+    <a href="index.html" aria-label="กลับหน้าหลัก">HOME</a>
+    <a href="2.html" class="active" aria-current="page">1</a>
+    <a href="2-1.html">2</a>
+    <a href="2-2.html">3</a>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+
+        // ดึงชื่อไฟล์หน้าปัจจุบัน
+        let currentPage = window.location.pathname.split("/").pop();
+
+        // ค้นหาปุ่มทั้งหมด
+        let navLinks = document.querySelectorAll(".page-navigation a");
+
+        navLinks.forEach(function (link) {
+
+          // เปรียบเทียบ URL ของปุ่มกับหน้าปัจจุบัน
+          let linkPage = link.getAttribute("href");
+
+          if (linkPage === currentPage) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+
+        });
+
+      });
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
